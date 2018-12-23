@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="theBox">
+        <input type="button" id="btnCheck" value="Check" onclick="theDictionary();">
+    </div>
+
+    <p id="result"></p>
+
+<script>
+
+    function theDictionary() {
+
+        english = ['animal', 'goose', 'dog', 'cat'];
+        vietNamese = ['dong vat', 'ngong', 'cho', 'meo'];
+
+        theData = "";
+
+        var theWord = document.getElementById("theBox").value;
+
+        for (i = 0; i < english.length; i++) {
+
+            if (theWord === english[i]) {
+
+                theData = vietNamese[i];
+            }
+        }
+        if (theData === ""){
+
+            theData = "no word was found"
+        }
+
+        document.getElementById("result").innerHTML = theData;
+    }
+
+</script>
+</body>
+</html>
